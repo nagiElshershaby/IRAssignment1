@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.util.Locale;
 import java.util.TreeMap;
 
-public class FReader {
+public class DocumentsFileReader {
     static BufferedReader reader;
     public static int counter = 0;
     public static void breakFileIntoTokens(String fileName, int docID , TreeMap<String, DictEntry>tokens) throws IOException {

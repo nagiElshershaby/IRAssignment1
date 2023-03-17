@@ -1,6 +1,6 @@
 package view;
 
-import file_connections.FReader;
+import file_connections.DocumentsFileReader;
 import models.DictEntry;
 import models.Posting;
 
@@ -12,8 +12,8 @@ public class View {
         TreeMap<String, DictEntry> tokens =new TreeMap<>();
 
 
-        FReader.breakFileIntoTokens("doc1.txt",1,tokens);
-        FReader.breakFileIntoTokens("doc2.txt",2,tokens);
+        DocumentsFileReader.breakFileIntoTokens("doc1.txt",1,tokens);
+        DocumentsFileReader.breakFileIntoTokens("doc2.txt",2,tokens);
 
         for (String key : tokens.keySet()) {
             System.out.print(key + "|  doc_freq: " + tokens.get(key).doc_freq);
