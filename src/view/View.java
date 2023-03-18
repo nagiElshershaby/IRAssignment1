@@ -23,14 +23,14 @@ public class View {
             Scanner input = new Scanner(System.in);
             choice = input.nextInt();
 
-            if(choice == 1)printUserToken(tokens);
-            else if (choice == 2)printAllTokens(tokens);
+            if(choice == 1) searchFor(tokens);
+            else if (choice == 2) printAll(tokens);
             else System.out.println("there was no "+choice+" choice");
         }while (choice != 0);
 
 
     }
-    private static void printUserToken(TreeMap<String, DictEntry> tokens){
+    private static void searchFor(TreeMap<String, DictEntry> tokens){
         Scanner input = new Scanner(System.in);
         System.out.println("Enter the word u r searching for!: ");
         String word = input.nextLine();
@@ -62,7 +62,7 @@ public class View {
             System.out.println();
         }
     }
-    private static void printAllTokens(TreeMap<String, DictEntry> tokens){
+    private static void printAll(TreeMap<String, DictEntry> tokens){
         for (String key : tokens.keySet()) {
             System.out.print(key + "|  doc_freq: " + tokens.get(key).doc_freq);
             System.out.print("   |  term_freq: " + tokens.get(key).term_freq + "|  ");
